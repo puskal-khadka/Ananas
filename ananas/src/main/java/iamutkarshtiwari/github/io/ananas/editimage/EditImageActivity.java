@@ -201,6 +201,9 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
         mainMenuFragment = MainMenuFragment.newInstance();
         mainMenuFragment.setArguments(getIntent().getExtras());
 
+        /**
+         * bottom viewpager
+         */
         BottomGalleryAdapter bottomGalleryAdapter = new BottomGalleryAdapter(
                 this.getSupportFragmentManager());
         stickerFragment = StickerFragment.newInstance();

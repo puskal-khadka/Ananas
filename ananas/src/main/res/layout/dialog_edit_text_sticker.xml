@@ -30,6 +30,7 @@
         android:layout_above="@+id/add_text_color_picker_recycler_view"
         android:layout_below="@+id/add_text_done_tv"
         android:gravity="center"
+        android:focusable="true"
         android:inputType="textMultiLine"
         android:textSize="@dimen/text_size_40sp" />
 

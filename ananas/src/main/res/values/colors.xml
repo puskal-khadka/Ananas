@@ -10,6 +10,10 @@
     <color name="text_color">#BEC2C4</color>
     <color name="text_color_gray_3">#A6A5A5</color>
 
+    <color name="primary_color">#26324A</color>
+    <color name="sec_color">#76BF4E</color>
+
+
     <!--Kelly's 22 contrast colors-->
     <color name="kelly_1">#F2F3F4</color>
     <color name="kelly_2">#1d1d1d</color>

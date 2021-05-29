@@ -26,17 +26,19 @@
                 <ImageView
                     style="@style/icon_style"
                     android:layout_gravity="center"
-                    android:src="@drawable/paint" />
+                    android:src="@drawable/ic_pen" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/iamutkarshtiwari_github_io_ananas_edit"
+                    android:text="Pen"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -59,7 +61,9 @@
                     android:text="@string/iamutkarshtiwari_github_io_ananas_filter"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -73,17 +77,19 @@
                 <ImageView
                     style="@style/icon_style"
                     android:layout_gravity="center"
-                    android:src="@drawable/crop" />
+                    android:src="@drawable/ic_crop" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/iamutkarshtiwari_github_io_ananas_crop"
+                    android:text="@string/crop"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -97,17 +103,19 @@
                 <ImageView
                     style="@style/icon_style"
                     android:layout_gravity="center"
-                    android:src="@drawable/rotate" />
+                    android:src="@drawable/ic_rotate" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/iamutkarshtiwari_github_io_ananas_rotate"
+                    android:text="@string/rotate"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -121,17 +129,19 @@
                 <ImageView
                     style="@style/icon_style"
                     android:layout_gravity="center"
-                    android:src="@drawable/text" />
+                    android:src="@drawable/ic_text" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/iamutkarshtiwari_github_io_ananas_text"
+                    android:text="@string/text"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -155,7 +165,9 @@
                     android:text="@string/iamutkarshtiwari_github_io_ananas_stickers"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -179,7 +191,9 @@
                     android:text="@string/iamutkarshtiwari_github_io_ananas_brightness"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -203,7 +217,9 @@
                     android:text="@string/iamutkarshtiwari_github_io_ananas_saturation"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 
@@ -227,7 +243,9 @@
                     android:text="@string/iamutkarshtiwari_github_io_ananas_beauty"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/image_edit_text_size"
-                    tool:text="Text" />
+                    tool:text="Text"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    />
 
             </LinearLayout>
 

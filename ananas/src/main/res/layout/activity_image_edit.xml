@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -8,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="55dp"
         android:layout_alignParentTop="true"
-        android:background="#333333">
+        android:background="@color/primary_color">
 
         <ImageView
             android:id="@+id/back_btn"
@@ -47,8 +48,9 @@
                 android:gravity="center"
                 android:text="@string/iamutkarshtiwari_github_io_ananas_done"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
-                android:textSize="14sp" />
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/sec_color"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/apply"
@@ -56,9 +58,10 @@
                 android:layout_height="fill_parent"
                 android:gravity="center"
                 android:text="@string/iamutkarshtiwari_github_io_ananas_apply"
+                style="@style/TextAppearance.AppCompat.Body2"
                 android:textAllCaps="true"
-                android:textColor="#ffffff"
-                android:textSize="14sp" />
+                android:textColor="@color/sec_color"
+                android:textSize="16sp" />
         </ViewFlipper>
     </RelativeLayout>
 
@@ -67,7 +70,8 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/bottom_banner_height"
         android:layout_alignParentBottom="true"
-        android:background="@color/main_backgroud"
+        android:background="@drawable/bottom_curve"
+        android:backgroundTint="@color/primary_color"
         android:overScrollMode="never" />
 
     <FrameLayout
@@ -89,7 +93,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
         <iamutkarshtiwari.github.io.ananas.editimage.layout.ZoomLayout
             android:id="@+id/text_sticker_panel_frame"

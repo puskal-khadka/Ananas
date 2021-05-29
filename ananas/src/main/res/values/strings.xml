@@ -1,4 +1,10 @@
 <resources>
+    <string name="pen">Pen</string>
+    <string name="crop">Crop</string>
+    <string name="rotate">Rotate</string>
+    <string name="text">Text</string>
+
+
     <string name="iamutkarshtiwari_github_io_ananas_library_name">Photo Editor</string>
     <string name="iamutkarshtiwari_github_io_ananas_no_images">No image found</string>
     <string name="iamutkarshtiwari_github_io_ananas_images">%d images</string>

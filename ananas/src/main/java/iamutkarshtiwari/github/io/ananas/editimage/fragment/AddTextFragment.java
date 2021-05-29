@@ -90,6 +90,10 @@ public class AddTextFragment extends BaseEditFragment implements OnPhotoEditorLi
 
         LinearLayout addTextButton = mainView.findViewById(R.id.add_text_btn);
         addTextButton.setOnClickListener(this);
+
+        //show text input on touch
+        TextEditorDialogFragment textEditorDialogFragment = TextEditorDialogFragment.show(activity);
+        textEditorDialogFragment.setOnTextEditorListener(this::addText);
     }
 
     private void showTextEditDialog(final View rootView, String text, int colorCode) {
