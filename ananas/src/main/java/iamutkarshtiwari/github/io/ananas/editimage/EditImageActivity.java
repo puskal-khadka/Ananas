@@ -318,7 +318,7 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
                     onSaveTaskDone();
                 } else {
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-                    alertDialogBuilder.setMessage(R.string.iamutkarshtiwari_github_io_ananas_exit_without_save)
+                    alertDialogBuilder.setMessage(R.string.str_exist_without_save)
                             .setCancelable(false).setPositiveButton(R.string.iamutkarshtiwari_github_io_ananas_confirm, (dialog, id) -> finish()).setNegativeButton(R.string.iamutkarshtiwari_github_io_ananas_cancel, (dialog, id) -> dialog.cancel());
 
                     AlertDialog alertDialog = alertDialogBuilder.create();
@@ -350,7 +350,7 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
     protected void onSaveTaskDone() {
         Intent returnIntent = new Intent();
         returnIntent.putExtra(ImageEditorIntentBuilder.SOURCE_PATH, sourceFilePath);
-        returnIntent.putExtra(ImageEditorIntentBuilder.OUTPUT_PATH, outputFilePath);
+        returnIntent.putExtra(ImageEditorIntentBuilder.OUTPUT_PATH, folderPath);
         returnIntent.putExtra(IS_IMAGE_EDITED, numberOfOperations > 0);
 
         setResult(RESULT_OK, returnIntent);
@@ -380,6 +380,7 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
         compositeDisposable.add(saveImageDisposable);
     }
 
+    String folderPath="";
     private Single<Boolean> saveImage(Bitmap finalBitmap) {
         return Single.fromCallable(() -> {
             if (TextUtils.isEmpty(outputFilePath))
@@ -387,7 +388,7 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
 
 //            return BitmapUtils.saveBitmap(finalBitmap, outputFilePath);
 //           return saveBitmapToInternal(finalBitmap);
-             MyBitmapHelper.saveBitmapToInternal(finalBitmap, getApplicationContext());
+            folderPath=MyBitmapHelper.saveBitmapToInternal(finalBitmap, getApplicationContext());
              return true;
 
         });

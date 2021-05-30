@@ -60,11 +60,11 @@ public class StickerItem {
 
         if (deleteBit == null) {
             deleteBit = BitmapFactory.decodeResource(context.getResources(),
-                    R.drawable.ic_close);
+                    R.drawable.test_image);
         }
         if (rotateBit == null) {
             rotateBit = BitmapFactory.decodeResource(context.getResources(),
-                    R.drawable.ic_resize);
+                    R.drawable.test_image);
         }
     }
 

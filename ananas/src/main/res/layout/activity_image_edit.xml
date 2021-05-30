@@ -18,7 +18,7 @@
             android:layout_gravity="left|center_vertical"
             android:layout_margin="10dp"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/back_arrow" />
+            android:src="@drawable/test_image" />
 
         <TextView
             android:id="@+id/title"

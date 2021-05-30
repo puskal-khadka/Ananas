@@ -155,7 +155,7 @@
                 <ImageView
                     style="@style/icon_style"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_stickers" />
+                    android:src="@drawable/test_image" />
 
                 <TextView
                     android:layout_width="wrap_content"

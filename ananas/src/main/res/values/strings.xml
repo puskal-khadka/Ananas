@@ -103,8 +103,8 @@
 
     <string name="iamutkarshtiwari_github_io_ananas_more">More</string>
     <string name="iamutkarshtiwari_github_io_ananas_exit_without_save">The edited image is not saved. Do you want to exit? </string>
-    <string name="iamutkarshtiwari_github_io_ananas_confirm">Confirm</string>
-    <string name="iamutkarshtiwari_github_io_ananas_cancel">Cancel</string>
+    <string name="iamutkarshtiwari_github_io_ananas_confirm">Leave</string>
+    <string name="iamutkarshtiwari_github_io_ananas_cancel">No Thanks</string>
 
     <string name="iamutkarshtiwari_github_io_ananas_beauty">Beauty</string>
     <string name="iamutkarshtiwari_github_io_ananas_smooth">Smoothness</string>
@@ -112,4 +112,5 @@
 
     <item type="id" translatable="false" name="iamutkarshtiwari_github_io_ananas_TAG_STICKERS_PATH" />
     <item type="id" translatable="false" name="iamutkarshtiwari_github_io_ananas_TAG_STICKERS_COUNT" />
+    <string name="str_exist_without_save">The changes you made will be lost if you leave this page. Do you want to leave?</string>
 </resources>
