@@ -3,14 +3,19 @@ package iamutkarshtiwari.github.io.ananas.editimage;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,6 +33,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 import iamutkarshtiwari.github.io.ananas.BaseActivity;
 import iamutkarshtiwari.github.io.ananas.R;
@@ -376,11 +385,45 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
             if (TextUtils.isEmpty(outputFilePath))
                 return false;
 
-            return BitmapUtils.saveBitmap(finalBitmap, outputFilePath);
+//            return BitmapUtils.saveBitmap(finalBitmap, outputFilePath);
+           return saveBitmapToInternal(finalBitmap);
+
         });
     }
 
+    private boolean saveBitmapToInternal(Bitmap bitmap) {
+        ContextWrapper contextWrapper = new ContextWrapper(getApplicationContext());
+        File directory = contextWrapper.getDir("Dir_Puskal", Context.MODE_PRIVATE);
+        File file = new File(directory, "puskal_trial.jpg");
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+
+        } catch (Exception e) {
+
+        }
+        finally {
+            try {
+                fos.close();
+                Log.d("fd", "file path is " + directory.getAbsolutePath()+"puskal_trial.jpg");
+
+            } catch (Exception e) {
+
+            }
+        }
+
+        return true;
+
+
+
+    }
+
     private void loadImageFromFile(String filePath) {
+        Log.d("f", "file path is " + filePath);
         compositeDisposable.clear();
 
         Disposable loadImageDisposable = loadImage(filePath)
@@ -394,9 +437,14 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
     }
 
     private Single<Bitmap> loadImage(String filePath) {
-        return Single.fromCallable(() -> BitmapUtils.getSampledBitmap(filePath, imageWidth,
-                imageHeight));
+//        return Single.fromCallable(() -> BitmapUtils.getSampledBitmap(filePath, imageWidth,
+//                imageHeight));
+        return Single.fromCallable(() ->
+                MyBitmapHelper.getBitmapFromPath(filePath)
+//                getBitmap(filePath)
+                );
     }
+
 
     private void showToast(@StringRes int resId) {
         Toast.makeText(this, resId, Toast.LENGTH_SHORT).show();

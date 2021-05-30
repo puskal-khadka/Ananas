@@ -92,8 +92,8 @@ public class AddTextFragment extends BaseEditFragment implements OnPhotoEditorLi
         addTextButton.setOnClickListener(this);
 
         //show text input on touch
-        TextEditorDialogFragment textEditorDialogFragment = TextEditorDialogFragment.show(activity);
-        textEditorDialogFragment.setOnTextEditorListener(this::addText);
+//        TextEditorDialogFragment textEditorDialogFragment = TextEditorDialogFragment.show(activity);
+//        textEditorDialogFragment.setOnTextEditorListener(this::addText);
     }
 
     private void showTextEditDialog(final View rootView, String text, int colorCode) {

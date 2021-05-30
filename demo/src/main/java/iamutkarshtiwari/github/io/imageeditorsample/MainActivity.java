@@ -2,9 +2,12 @@ package iamutkarshtiwari.github.io.imageeditorsample;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,10 +24,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
 import java.io.File;
+import java.io.FileOutputStream;
 
 import iamutkarshtiwari.github.io.ananas.BaseActivity;
 import iamutkarshtiwari.github.io.ananas.editimage.EditImageActivity;
 import iamutkarshtiwari.github.io.ananas.editimage.ImageEditorIntentBuilder;
+import iamutkarshtiwari.github.io.ananas.editimage.MyBitmapHelper;
 import iamutkarshtiwari.github.io.ananas.editimage.utils.BitmapUtils;
 import iamutkarshtiwari.github.io.ananas.picchooser.SelectPictureActivity;
 import io.reactivex.Single;
@@ -139,10 +144,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
     private void editImageClick() {
         File outputFile = FileUtils.genEditFile();
+        String outputPath=outputFile.getAbsolutePath();
+
+        Bitmap bitmap=((BitmapDrawable)getResources().getDrawable(R.drawable.filter_12)).getBitmap();
+        String imagePath= MyBitmapHelper.saveBitmapToInternal(bitmap,getApplicationContext());
+
+        String testingOpPath="fake";
+
         try {
-            Intent intent = new ImageEditorIntentBuilder(this, path, outputFile.getAbsolutePath())
+            Intent intent = new ImageEditorIntentBuilder(this, imagePath,testingOpPath )
                     .withAddText()
                     .withPaintFeature()
 //                    .withFilterFeature()
@@ -160,9 +173,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             EditImageActivity.start(this, intent, ACTION_REQUEST_EDITIMAGE);
         } catch (Exception e) {
             Toast.makeText(this, R.string.iamutkarshtiwari_github_io_ananas_not_selected, Toast.LENGTH_SHORT).show();
-            Log.e("Demo App", e.getMessage());
+            Log.e("Demo App", "test is " +e.getMessage());
         }
     }
+
+
 
     private void selectFromAblum() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
