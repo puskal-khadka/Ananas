@@ -386,7 +386,9 @@ public class EditImageActivity extends BaseActivity implements OnLoadingDialogLi
                 return false;
 
 //            return BitmapUtils.saveBitmap(finalBitmap, outputFilePath);
-           return saveBitmapToInternal(finalBitmap);
+//           return saveBitmapToInternal(finalBitmap);
+             MyBitmapHelper.saveBitmapToInternal(finalBitmap, getApplicationContext());
+             return true;
 
         });
     }

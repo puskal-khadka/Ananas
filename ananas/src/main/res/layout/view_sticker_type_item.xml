@@ -12,7 +12,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
-        android:src="@drawable/yd_image_tx"
+        android:src="@drawable/test_image"
         android:visibility="gone" />
 
     <TextView

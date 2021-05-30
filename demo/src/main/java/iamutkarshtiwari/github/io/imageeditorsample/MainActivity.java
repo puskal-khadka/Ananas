@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         File outputFile = FileUtils.genEditFile();
         String outputPath=outputFile.getAbsolutePath();
 
-        Bitmap bitmap=((BitmapDrawable)getResources().getDrawable(R.drawable.filter_12)).getBitmap();
+        Bitmap bitmap=((BitmapDrawable)getResources().getDrawable(R.drawable.image_edit_back)).getBitmap();
         String imagePath= MyBitmapHelper.saveBitmapToInternal(bitmap,getApplicationContext());
 
         String testingOpPath="fake";
