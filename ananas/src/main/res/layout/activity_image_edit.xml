@@ -18,7 +18,8 @@
             android:layout_gravity="left|center_vertical"
             android:layout_margin="10dp"
             android:layout_marginLeft="8dp"
-            android:src="@drawable/test_image" />
+            android:padding="2dp"
+            android:src="@drawable/ic_check_back__" />
 
         <TextView
             android:id="@+id/title"

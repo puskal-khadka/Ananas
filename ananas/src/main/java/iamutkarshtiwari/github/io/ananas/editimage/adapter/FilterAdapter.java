@@ -54,7 +54,8 @@ public class FilterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         String imageUrl = "drawable/" + filterImages[position];
         int imageKey = filterListFragment.getResources().getIdentifier(imageUrl, "drawable", context.getPackageName());
-        filterViewHolder.icon.setImageDrawable(filterListFragment.getResources().getDrawable(imageKey));
+        //todo
+//        filterViewHolder.icon.setImageDrawable(filterListFragment.getResources().getDrawable(imageKey));
 
         filterViewHolder.icon.setTag(position);
         filterViewHolder.icon.setOnClickListener(v -> filterListFragment.enableFilter(position));

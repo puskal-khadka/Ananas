@@ -30,7 +30,6 @@
         android:layout_gravity="top|start"
         android:elevation="@dimen/elevation_2dp"
         android:src="@drawable/cancel_text_sticker"
-        android:backgroundTint="@color/materialcolorpicker__red"
         />
 
 </FrameLayout>
