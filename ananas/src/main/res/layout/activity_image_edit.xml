@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="55dp"
         android:layout_alignParentTop="true"
-        android:background="@color/primary_color">
+        android:background="@color/primary_color_image_edi">
 
         <ImageView
             android:id="@+id/back_btn"
@@ -72,7 +72,7 @@
         android:layout_height="@dimen/bottom_banner_height"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_curve"
-        android:backgroundTint="@color/primary_color"
+        android:backgroundTint="@color/primary_color_image_edi"
         android:overScrollMode="never" />
 
     <FrameLayout
